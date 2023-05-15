@@ -22,3 +22,24 @@ If locate command is not found or it is not found then run following commands
 2.  chmod a+x  where a indicates everyone.
 3.  6- rw  5 wx 3 xw 2 w 1 x
 4.  getfacl test will return
+
+### To Add the permission to a user
+setfacl -m u:user:rwx /path
+setfacl -m u:raman:rwx /tmp/test
+### To Add the permission to a group
+setfacl -m g:group:rw /path
+setfacl -m g:ec2-user /tmp/dir
+### To allow all the files or directories to inherit ACL entries from the directory it is within
+TBS
+### To remove the permission for a specific user
+ setfacl -x u:raman test
+### To remove all the entries 
+ setfacl -b test
+<b>Note </b> -w option not allow to delete the directory/file but you can modify
+
+# Help Commandsh
+1. <b>whatis</b>  it gives very minimal information like <i>whatis touch </i>
+2. <b>help</b> it gives gives descriptive information of a command <i>ls --help </i>
+3. <b>man</b> it gives more descriptive command 
+
+
